@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import SamoState from "./components/SamoState";
+import UseEffectSaCleanupom from "./components/UseEffectSaCleanupom";
+import UseEffectSaDepenencijima from "./components/UseEffectSaDepenencijima";
+import Kontekst from "./components/Kontekst";
+import UseReducerPrimjer from "./components/UseReducerPrimjer";
+
+import "./App.css";
+import UseRef from "./components/UseRef";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <SamoState />
+      <hr />
+      <UseEffectSaCleanupom />
+      <hr />
+      <UseEffectSaDepenencijima />
+      <hr />
+      <Kontekst />
+      <hr />
+      <UseRef />
+      <hr />
+      <UseReducerPrimjer />
+      <hr />
     </div>
   );
 }
