@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import reducer from "../reducers/reducer.js";
+import reducer, { COMPLETE, DELETE } from "../reducers/reducer.js";
 
 const initialTodos = [
   {
@@ -18,11 +18,11 @@ function UseReducerPrimjer() {
   const [todos, dispatch] = useReducer(reducer, initialTodos);
 
   const handleComplete = (todo) => {
-    dispatch({ type: "COMPLETE", id: todo.id });
+    dispatch({ type: COMPLETE, id: todo.id });
   };
 
   const handleDelete = (todo) => {
-    dispatch({ type: "DELETE", id: todo.id });
+    dispatch({ type: DELETE, id: todo.id });
   };
 
   return (

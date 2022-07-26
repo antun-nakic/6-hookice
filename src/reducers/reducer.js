@@ -1,6 +1,9 @@
+export const COMPLETE = "COMPLETE";
+export const DELETE = "DELETE";
+
 const reducer = (state, action) => {
   switch (action.type) {
-    case "COMPLETE":
+    case COMPLETE:
       return state.map((todo) => {
         if (todo.id === action.id) {
           return { ...todo, complete: !todo.complete };
@@ -8,7 +11,7 @@ const reducer = (state, action) => {
           return todo;
         }
       });
-    case "DELETE":
+    case DELETE:
       return state.filter((todo) => todo.id !== action.id);
     default:
       return state;
